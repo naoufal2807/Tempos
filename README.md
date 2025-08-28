@@ -1,7 +1,8 @@
+
 <p align="center">
-  <img src=<img width="1024" height="1024" alt="temposlogo" src="https://github.com/user-attachments/assets/3e9f3333-c860-4389-b16c-a0d6957c5f29"/>
-/" alt="Tempos Logo" width="150"/>
+  <img src="https://github.com/user-attachments/assets/efc2aaf7-50d7-4b1a-aee7-bccbbf7f6ab5" alt="Tempos Logo" width="200"/>
 </p>
+
 
 # ⏳ Tempos
 
