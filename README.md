@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/<img width="1024" height="1024" alt="ChatGPT Image 28 août 2025, 12_12_13" src="https://github.com/user-attachments/assets/07bccd85-06d3-4773-9a3d-1e907a61add8" />
+  <img src=<img width="1024" height="1024" alt="temposlogo" src="https://github.com/user-attachments/assets/3e9f3333-c860-4389-b16c-a0d6957c5f29"/>
 /" alt="Tempos Logo" width="150"/>
 </p>
 
