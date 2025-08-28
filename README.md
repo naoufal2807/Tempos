@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="assets/<img width="1024" height="1024" alt="ChatGPT Image 28 août 2025, 12_12_13" src="https://github.com/user-attachments/assets/07bccd85-06d3-4773-9a3d-1e907a61add8" />
+/" alt="Tempos Logo" width="150"/>
+</p>
+
 # ⏳ Tempos
 
 **Find your rhythm. Get things done.**  
