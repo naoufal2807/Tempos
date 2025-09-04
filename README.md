@@ -7,7 +7,7 @@
 # ⏳ Tempos
 
 **Find your rhythm. Get things done.**  
-Tempos is a smart schedule and task manager built with **Streamlit**, **LangChain**, and **Ollama**.  
+Tempos is a smart schedule and task manager built with **Streamlit** and **Ollama**.  
 Inspired by the Greek word for rhythm (*“tempos”*), it helps you organize tasks, extract schedules from natural language, and query them effortlessly.
 
 ---
@@ -18,7 +18,7 @@ Inspired by the Greek word for rhythm (*“tempos”*), it helps you organize ta
 - 🗂 **SQLite Database** → Tasks and schedules are stored locally, no external dependencies.  
 - 🔍 **Natural Language Querying** → Ask questions like *“What are my deadlines next week?”* and get results via NL → SQL.  
 - 📊 **Interactive UI** → Built with Streamlit for a clean, responsive interface.  
-- ⚡ **Powered by AI** → Uses LangChain + Ollama to interpret tasks and queries.  
+- ⚡ **Powered by AI** → Uses Ollama to interpret tasks and queries.  
 
 ---
 
@@ -28,3 +28,4 @@ Inspired by the Greek word for rhythm (*“tempos”*), it helps you organize ta
 ```bash
 git clone https://github.com/naoufal2807/tempos.git
 cd tempos
+
