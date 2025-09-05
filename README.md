@@ -82,33 +82,31 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-  M[app/main.py] --> R[include_router /api/v1]
-  R --> H[/api/v1/health/]
-  R --> T[/api/v1/tasks/]
-  R --> Q[/api/v1/query/]
+  M["app/main.py"] --> R["include_router /api/v1"]
+  R --> H["/api/v1/health/"]
+  R --> T["/api/v1/tasks/"]
+  R --> Q["/api/v1/query/"]
 
   subgraph Services
     NLP["services/nlp_parse.py\nparse_tasks()"]
     OGEN["ollama_generate()\nPOST /api/generate"]
-    CFG[settings (.env)]
+    CFG["settings (.env)"]
   end
 
   subgraph Schemas
-    S1[TaskCreate]
-    S2[TaskRead]
-    S3[TaskUpdate]
+    S1["TaskCreate"]
+    S2["TaskRead"]
+    S3["TaskUpdate"]
   end
 
   subgraph Models
-    TM[Task (SQLModel, table=true)]
+    TM["Task (SQLModel, table=true)"]
   end
 
   T --> NLP --> OGEN --> NLP
   T --> TM
   Q --> TM
-
 ```
-
 ---
 
 ## Project Structure (relevant bits)
