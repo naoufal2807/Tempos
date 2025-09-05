@@ -58,9 +58,7 @@ curl http://localhost:8000/health
 curl http://localhost:8000/api/v1/health
 
 # Parse tasks from text (example)
-curl -X POST http://localhost:8000/api/v1/tasks/parse \
-  -H "Content-Type: application/json" \
-  -d '{"text":"Tomorrow 9am deploy API, 45min, office"}'
+curl -X POST http://localhost:8000/api/v1/tasks/parse   -H "Content-Type: application/json"   -d '{"text":"Tomorrow 9am deploy API, 45min, office"}'
 ```
 
 ---
@@ -69,28 +67,29 @@ curl -X POST http://localhost:8000/api/v1/tasks/parse \
 
 ```mermaid
 flowchart LR
-  User[User (Browser)] -->|HTTP 8501| UI[Streamlit UI]
-  UI -->|HTTP 8000| API[FastAPI API]
-  API -->|HTTP 11434| OLL[Ollama Server]
-  API --> DB[(SQLite)]
-  subgraph Docker_Network
-    UI
-    API
-    OLL
-    DB
+  subgraph DockerNetwork
+    UI[Streamlit UI]
+    API[FastAPI API]
+    OLL[Ollama Server]
+    DB[(SQLite)]
   end
+
+  User[User] -->|HTTP 8501| UI
+  UI -->|HTTP 8000| API
+  API -->|HTTP 11434| OLL
+  API --> DB
 ```
 
 ```mermaid
 flowchart TB
-  M[app/main.py] --> R[include_router(/api/v1)]
+  M[app/main.py] --> R[include_router /api/v1]
   R --> H[/api/v1/health/]
   R --> T[/api/v1/tasks/]
   R --> Q[/api/v1/query/]
 
   subgraph Services
-    NLP[services/nlp_parse.py\nparse_tasks()]
-    OGEN[ollama_generate()\nPOST /api/generate]
+    NLP[services/nlp_parse.py<br/>parse_tasks()]
+    OGEN[ollama_generate()<br/>POST /api/generate]
     CFG[settings (.env)]
   end
 
@@ -101,7 +100,7 @@ flowchart TB
   end
 
   subgraph Models
-    TM[Task (SQLModel, table=True)]
+    TM[Task (SQLModel, table=true)]
   end
 
   T --> NLP --> OGEN --> NLP
@@ -186,6 +185,5 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
 
 
