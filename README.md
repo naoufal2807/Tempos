@@ -88,8 +88,8 @@ flowchart TB
   R --> Q[/api/v1/query/]
 
   subgraph Services
-    NLP[services/nlp_parse.py<br/>parse_tasks()]
-    OGEN[ollama_generate()<br/>POST /api/generate]
+    NLP["services/nlp_parse.py\nparse_tasks()"]
+    OGEN["ollama_generate()\nPOST /api/generate"]
     CFG[settings (.env)]
   end
 
@@ -106,6 +106,7 @@ flowchart TB
   T --> NLP --> OGEN --> NLP
   T --> TM
   Q --> TM
+
 ```
 
 ---
